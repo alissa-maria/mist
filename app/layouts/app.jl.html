@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hi mom | $(title)</title>
+  <link rel="stylesheet" type="text/css" href="/css/home.css" media="all">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <script src="/js/sidebar.js"></script>
+</head>
+
+<body>
+
+  <aside>
+    <nav id="sidebar">
+      <a href="javascript:void(0)" id="nav-heart" onclick="toggleVisibility()">♡</a>
+      <ul id="nav-list">
+        <li><a href="/">home</a></li>
+        <li><a href="/">atelier</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main>
+    <% @yield %>
+  </main>
+
+</body>
+
+</html>

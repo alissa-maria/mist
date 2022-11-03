@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import "/css/base.css";
+@import "/css/sidebar.css";
+
+body {
+  background: url(../img/mountains.jpeg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: cover;
+
+  color: #111;
+  font-family: "MS Gothic", monospace;
+  font-size: 14px;
+
+  margin: auto;
+  padding: 20px;
+  padding-bottom: 60px;
+  max-width: 640px;
+  word-wrap: break-word;
+}
+
+main {
+  background-color: rgb(245, 240, 236);
+
+  border-color: #111;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 5px 5px #111;
+
+  padding: 0px 24px 24px;
+}
+
+aside {
+  padding: 10px;
+  width: 180px;
+}
+
+.ascii {
+  text-align: center;
+  padding: 12px;
+}
+
+@media screen and (min-width: 400px) {
+  main {
+    padding: 20px 40px 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    width: 200px;
+    padding: 80px 80px 40px;
+  }
+}
+
+.list-hearts{
+  list-style-type: none;
+  margin-left: -16px;
+}
+
+.list-hearts li::before {
+  content: "♡";
+  margin-right: 10px;
+}
+
+h1 {
+  font-family: 'Share Tech Mono', monospace;
+  color: #CF7151;
+}
+
+h2 {
+  font-family: 'Share Tech Mono', monospace;
+}
+
+h2, h3 {
+  color: #2C3D45;
+  margin-top: 25px;
+}
+
+a {
+  color: #5F00FF;
+}
+
+a:visited {
+  color: #190baf;
+}
+
+a:active {
+  color: red;
+}
+
+pre {
+  line-height: 1.15;
+  /* font-size: 87.5%; */
+  font-family: "MS Gothic", consolas;
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+}
+
+input,
+textarea {
+  margin-bottom: 6px;
+  font-family: "MS Gothic", monospace;
+  font-size: 14px;
+}
+
+#comment-table td {
+  vertical-align: top;
+  padding-right: 10px;
+}

@@ -1,0 +1,18 @@
+* {
+    cursor: url(../cursors/arrow.png), auto;
+}
+
+a:hover,
+button:hover,
+#submit {
+    cursor: url(../cursors/pointer.png), pointer;
+}
+
+img:hover[title] {
+    cursor: url(../cursors/help.png), help;
+}
+
+input[type=text],
+textarea {
+    cursor: text;
+}

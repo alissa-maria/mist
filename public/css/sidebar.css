@@ -1,0 +1,43 @@
+nav {
+  background-color: rgb(245, 240, 236);
+
+  border-color: #111;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 5px 5px #111;
+
+  padding: 10px 0px 20px;
+}
+
+#nav-heart {
+  padding-left: 20px;
+}
+
+#nav-list {
+  display: none;
+  list-style-type: none;
+  margin-left: -16px;
+}
+
+@media screen and (min-width: 1200px) {
+  #nav-heart {
+    display: none;
+  }
+
+  #nav-list {
+    display: block;
+  }
+
+  #nav-list li {
+    margin-left: 25.5px;
+  }
+
+  #nav-list li:hover {
+    margin-left: 0;
+  }
+
+  #nav-list li:hover::before {
+    content: "♡";
+    margin-right: 11px;
+  }
+}

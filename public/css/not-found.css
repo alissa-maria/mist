@@ -1,0 +1,14 @@
+body {
+    background-color: #000;
+}
+
+img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+img:hover {
+    cursor: url(../cursors/pointer.png), pointer;
+}
