@@ -1,5 +1,21 @@
-env: ENV["GENIE_ENV"]
+# env: ENV["GENIE_ENV"]
+
+# dev:
+#   adapter:  SQLite
+#   database: db/dev.sqlite3
 
 dev:
-  adapter:  SQLite
-  database: db/dev.sqlite3
+  adapter:  MySQL
+  host:     127.0.0.1
+  port:     3306
+  database: dev
+  username: root
+  password: 123Connor!0
+
+prod:
+  adapter:  MySQL
+  host:     127.0.0.1
+  port:     3306
+  database: motregen
+  username: antiopa
+  password:
