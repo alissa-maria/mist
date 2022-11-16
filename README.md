@@ -4,7 +4,7 @@ ok personal website fr this time
 
 pages
 - [ ] home
-- [ ] gallery
+- [x] gallery
 - [ ] blog
 - [x] guestbook
 - [x] 404 page

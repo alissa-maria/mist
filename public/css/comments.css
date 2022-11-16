@@ -6,6 +6,11 @@ textarea {
   font-size: 14px;
 }
 
+#name {
+  padding: 2px;
+  padding-left: 6px;
+}
+
 textarea {
   resize: none;
   max-width: 100%;
