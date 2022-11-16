@@ -1,8 +1,3 @@
-@font-face {
-    font-family: linux;
-    src: url(/fonts/MS\ Gothic.tff);
-}
-
 * {
     cursor: url(/cursors/arrow.png), auto;
 }
