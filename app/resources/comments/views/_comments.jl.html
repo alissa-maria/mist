@@ -4,7 +4,7 @@
     <% if ! isempty(comments) %>
         <% for_each(comments) do comment %>
             <div class="comment">
-                <p><b>$(comment.name)</b> <em>$(comment.created_at)</em></p>
+                <p><b>$(comment.name)</b> <!--<em>$(comment.created_at)</em>--></p>
 
                 <pre>$(comment.text)</pre>
             </div>
