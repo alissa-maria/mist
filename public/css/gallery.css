@@ -1,6 +1,6 @@
 @import "/css/base.css";
 
-img:hover {
+img:hover, b:hover {
   cursor: url(/cursors/pointer.png), pointer;
 }
 
@@ -28,7 +28,7 @@ aside {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: flex-start;
-  margin-bottom: 40px;
+  margin-bottom: 16px;
 }
 
 #gallery .col {
@@ -47,8 +47,34 @@ img:hover {
   transform: scale(1.05);
 }
 
-p, summary {
+p,
+summary {
   font-size: 14px;
+}
+
+details[open] summary~* {
+  animation: sweep .5s ease-in-out;
+}
+
+@keyframes sweep {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #212121;
+    color: #fff8d1;
+  }
+
+  a:visited {
+    color: lightblue;
+  }
 }
 
 @media screen and (max-width: 800px) {
