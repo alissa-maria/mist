@@ -2,7 +2,7 @@ input,
 textarea {
   margin-bottom: 6px;
 
-  font-family: MS gothic, linux, consolas;
+  font-family: MS gothic, monospace, Arial;
   font-size: 14px;
 }
 
@@ -43,7 +43,7 @@ textarea {
 .comment>pre {
   width: 100%;
   white-space: pre-wrap;
-  font-family: MS gothic, linux, consolas;
+  font-family: MS gothic, monospace, Arial;
   font-size: 14px;
   margin-top: 8px;
 }

@@ -7,7 +7,7 @@ body {
     margin: 0;
 
     background-color: #dde3bb;
-    font-family: MS gothic, linux, consolas; /*ui-monospace?*/
+    font-family: MS gothic, monospace, Arial; /*ui-monospace?*/
     color: #1d1d1d;
 }
 
