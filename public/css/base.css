@@ -9,6 +9,7 @@ textarea {
 
 a:hover,
 button:hover,
+summary:hover,
 input[type=submit] {
     cursor: url(/cursors/pointer.png), pointer;
 }

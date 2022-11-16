@@ -1,0 +1,66 @@
+@import "/css/base.css";
+
+img:hover {
+  cursor: url(/cursors/pointer.png), pointer;
+}
+
+body {
+  background-color: #f1e7de;
+  color: #473d49;
+  font-family: MS Gothic, Helvetica, sans serif;
+
+  margin: auto;
+  padding: 20px;
+  padding-bottom: 60px;
+  max-width: 1360px;
+  word-wrap: break-word;
+}
+
+aside {
+  width: 280px;
+  padding-right: 20px;
+  float: left;
+}
+
+#gallery {
+  max-width: 1060px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+#gallery .col {
+  display: flex;
+  flex-direction: column;
+  width: calc(1060px/3);
+}
+
+#gallery .col img {
+  transition: 0.5s;
+  max-width: calc(1060px/3 - 20px);
+  margin: 10px;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+p, summary {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 800px) {
+  aside {
+    float: none;
+  }
+
+  #gallery {
+    padding-right: 20px;
+  }
+
+  #gallery .col img {
+    max-width: 100%;
+  }
+}
