@@ -1,10 +1,6 @@
 @import "/css/base.css";
 @import "/css/comments.css";
 
-@font-face {
-    font-family: linux;
-    src: url(/fonts/MS\ Gothic.ttf);
-}
 
 body {
     height: 100vh;
