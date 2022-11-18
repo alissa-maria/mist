@@ -2,30 +2,15 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>$(title)</title>
-  <link rel="stylesheet" type="text/css" href="/css/home.css" media="all">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <script src="/js/sidebar.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$(title)</title>
 </head>
 
 <body>
 
-  <aside>
-    <nav id="sidebar">
-      <a href="javascript:void(0)" id="nav-heart" onclick="toggleVisibility()">♡</a>
-      <ul id="nav-list">
-        <li><a href="/">home</a></li>
-        <li><a href="/gallery">gallery</a></li>
-        <li><a href="/guestbook">guestbook</a></li>
-      </ul>
-    </nav>
-  </aside>
-
-  <main>
     <% @yield %>
-  </main>
 
 </body>
 

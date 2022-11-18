@@ -12,5 +12,5 @@ img {
 }
 
 img:hover {
-    cursor: url(../cursors/pointer.png), pointer;
+    cursor: url(/cursors/pointer.png), pointer;
 }
