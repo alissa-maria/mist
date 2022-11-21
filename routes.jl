@@ -1,6 +1,9 @@
 using Genie.Router, Motregen.HomeController, Motregen.CommentsController
 
-route("/", HomeController.index)
+# route("/", HomeController.index)
+route("/") do 
+    serve_static_file("home.html")
+end
 
 route("/gallery") do 
     serve_static_file("gallery.html")

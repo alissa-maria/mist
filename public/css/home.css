@@ -1,0 +1,40 @@
+@import "/css/base.css";
+
+body {
+    font-family: MS Gothic, Helvetica, sans-serif;
+    background-color: #f3ddb4;
+    height: 90vh;
+}
+
+main,
+header,
+footer {
+    margin: auto;
+}
+
+main {
+    margin-top: 64px;
+    margin-bottom: 32px;
+    width: 720px;
+
+    background-color: whitesmoke;
+    box-shadow: 4px 4px rgb(94, 89, 89);
+}
+
+img {
+    max-width: 286px;
+    padding: 16px;
+    padding-right: 8px
+}
+
+h1 {
+    font-family: MS Sans Serif, Helvetica, sans serif;
+}
+
+td {
+    vertical-align: top;
+}
+
+#text-section {
+    padding: 16px;
+}
