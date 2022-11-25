@@ -21,10 +21,16 @@ main {
     box-shadow: 4px 4px rgb(94, 89, 89);
 }
 
-img {
+#img-regular {
     max-width: 286px;
     padding: 16px;
     padding-right: 8px
+}
+
+#img-small {
+    max-width: 90%;
+    margin: auto;
+    display: none;
 }
 
 h1 {
@@ -37,4 +43,23 @@ td {
 
 #text-section {
     padding: 16px;
+}
+
+@media screen and (max-width: 450px) {
+    main {
+        margin-top: 24px;
+        width: 90%   
+    }
+
+    footer {
+        padding-bottom: 32px;
+    }
+    
+    #img-regular {
+        display: none;
+    }
+
+    #img-small {
+        display: block;
+    }
 }

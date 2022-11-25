@@ -52,3 +52,13 @@ textarea {
   font-size: 14px;
   margin-top: 8px;
 }
+
+@media screen and (max-width: 450px) {
+  textarea {
+    max-width: 250px;
+  }
+
+  #comments {
+    padding: 16px 24px;
+  }
+}

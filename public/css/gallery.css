@@ -80,6 +80,7 @@ details[open] summary~* {
 @media screen and (max-width: 800px) {
   aside {
     float: none;
+    width: 100%;
   }
 
   #gallery {
