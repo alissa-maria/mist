@@ -6,8 +6,6 @@ body {
     margin: 0;
 
     background-color: #dde3bb;
-    font-family: MS gothic, Helvetica, sans serif;
-    /*ui-monospace?*/
     color: #1d1d1d;
 }
 
@@ -19,6 +17,7 @@ header {
 }
 
 h1 {
+    font-family: MS Gothic, Helvetica, sans serif;
     font-size: 1.5rem;
     margin-top: 6px;
 }

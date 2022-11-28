@@ -1,7 +1,6 @@
 @import "/css/base.css";
 
 body {
-    font-family: MS Gothic, Helvetica, sans-serif;
     background-color: #f3ddb4;
     height: 90vh;
 }
@@ -31,10 +30,6 @@ main {
     max-width: 90%;
     margin: auto;
     display: none;
-}
-
-h1 {
-    font-family: MS Sans Serif, Helvetica, sans serif;
 }
 
 td {
