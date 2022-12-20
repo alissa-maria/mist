@@ -1,16 +1,32 @@
-@import "/css/base.css";
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;700&display=swap');
 
 body {
     background-color: #000;
 }
 
-img {
+body {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-family: 'Inconsolata', MS Gothic, Arial;
+}
+
+img {
+    margin-bottom: 12px;
+}
+
+p {
+    color: #ddd;
+    text-align: center;
+    margin: 6px;
+}
+
+a {
+    color: #ddd;
+    text-decoration-style: dotted;
 }
 
 img:hover {
-    cursor: url(/cursors/pointer.png), pointer;
+    cursor: pointer;
 }

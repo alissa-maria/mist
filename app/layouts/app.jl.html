@@ -6,12 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>$(title)</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 
 <body>
+    <script>
+        function hamburger() {
+            var x = document.getElementById("topnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        } 
+    </script>
+
+    <header>
+        <h1>motregen &#60;3</h1>
+    </header>
+
+    <div class="topnav" id="topnav">
+        <a href="javascript:void(0);" class="icon" onclick="hamburger()">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+        <a href="/art">art</a>
+        <a href="#">tech</a>
+        <a href="#">media</a>
+        <a href="/guestbook" style="float:right">guestbook</a>
+        
+    </div>
 
     <% @yield %>
 
+    <footer>
+        <p><a href="#">site map</a> | <a href="#">contact</a></p>
+        <p style="text-align: center;"><a href="https://forestofunix.xyz/">&#60;&#60;</a> <a href="/nse">not software
+                engineers</a> <a href="https://quenten.nl/">&#62;&#62;</a></p>
+    </footer>
 </body>
 
 </html>
+
+    

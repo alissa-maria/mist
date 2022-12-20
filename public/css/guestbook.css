@@ -1,12 +1,20 @@
-@import "/css/base.css";
-@import "/css/comments.css";
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;700&display=swap');
 
 body {
     height: 100vh;
     margin: 0;
 
     background-color: #dde3bb;
+    /* background-image: linear-gradient(to right, #dde3bb, #edeabc); */
+    
     color: #1d1d1d;
+    font-family: 'Inconsolata', MS Gothic, Arial;
+}
+
+input[type=submit] {
+    cursor: pointer;
+    /* background-color: rgb(245,246,247);
+    text-transform: uppercase; */
 }
 
 main,
@@ -17,14 +25,12 @@ header {
 }
 
 h1 {
-    font-family: MS Gothic, Helvetica, sans serif;
     font-size: 1.5rem;
     margin-top: 6px;
 }
 
 #header-box {
     padding: 32px 80px;
-    /*same as dark: 32px 68px*/
 }
 
 #header-img {
@@ -36,6 +42,16 @@ footer {
     margin-bottom: 64px;
 }
 
+input, textarea, .comment>pre {
+    font-family: 'Inconsolata', MS Gothic, Arial;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+a {
+    text-decoration-style: dotted;
+}
+
 @media screen and (max-width: 450px) {
     main {
         padding: 16px;
@@ -43,5 +59,69 @@ footer {
 
     #header-box {
         padding: 32px 36px 16px 36px;
+    }
+}
+
+/************************
+comments
+************************/
+
+input,
+textarea {
+    margin-bottom: 6px;
+}
+
+#name {
+    padding: 2px;
+    padding-left: 6px;
+}
+
+textarea {
+    resize: none;
+    max-width: 100%;
+    padding: 6px;
+}
+
+#comment-table {
+    width: 100%;
+}
+
+#comment-table td {
+    vertical-align: top;
+    padding-right: 10px;
+}
+
+#comments {
+    padding: 16px 68px;
+}
+
+.comment {
+    background-color: #ebe9e8;
+    box-shadow: 3px 3px #6f6e6d;
+
+    max-width: 100%;
+    padding: 0.2em 1em 0.3em;
+    margin: 0.7em;
+}
+
+.comment>p {
+    margin: 6px 0 6px;
+    text-indent: 0;
+    font-size: 14px;
+}
+
+.comment>pre {
+    width: 100%;
+    white-space: pre-wrap;
+    margin-top: 8px;
+}
+
+@media screen and (max-width: 450px) {
+    textarea {
+        max-width: 250px;
+    }
+
+    #comments {
+        padding: 16px 24px;
     }
 }

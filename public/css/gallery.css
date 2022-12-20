@@ -1,4 +1,4 @@
-@import "/css/base.css";
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;700&display=swap');
 
 img:hover, b:hover {
   cursor: url(/cursors/pointer.png), pointer;
@@ -7,6 +7,7 @@ img:hover, b:hover {
 body {
   background-color: #f1e7de;
   color: #473d49;
+  font-family: 'Inconsolata', MS Gothic, Arial;
   
   margin: auto;
   padding: 20px;
@@ -49,6 +50,10 @@ img:hover {
 p,
 summary {
   font-size: 14px;
+}
+
+a {
+  text-decoration-style: dotted;
 }
 
 details[open] summary~* {
