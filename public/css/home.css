@@ -78,6 +78,14 @@ ul {
     margin: 0 0.6em;
 }
 
+.cutes li {
+    margin-bottom: 4px;
+}
+
+.cutes li a {
+    font-weight: 400;
+}
+
 .leftcolumn {
     float: left;
     width: 70%;

@@ -30,6 +30,7 @@
         <a href="javascript:void(0);" class="icon" onclick="hamburger()">
             <i class="fa-solid fa-bars"></i>
         </a>
+        <a href="/">home</a>
         <a href="/art">art</a>
         <a href="#">tech</a>
         <a href="#">media</a>
@@ -37,10 +38,35 @@
         
     </div>
 
-    <% @yield %>
+    <div class="row">
+        <div class="leftcolumn">
+            <% @yield %>
+        </div>
+        <div class="rightcolumn">
+            <div class="card">
+                <h2>about me</h2>
+                <p>skeebeedoo bap doo bap skoop dee boop wappa woop wapwap badoobeedoo ba ba doop dee woop</p>
+            </div>
+            <div class="card">
+                <h3>to do</h3>
+                <ul class="checkboxes">
+                    <li>implement dark mode</li>
+                    <li>about me page</li>
+                    <li>tech projects page</li>
+                    <li>media reviews page</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>update log</h3>
+                <p><b>[19/12/2022]</b>: completely revamped the home page.</p>
+                <p><b>[24/11/2022]</b>: the website is now online!</p>
+                <p><b>[03/11/2022]</b>: initial commit of <em>motregen</em>.</p>
+            </div>
+        </div>
+    </div>
 
     <footer>
-        <p><a href="#">site map</a> | <a href="#">contact</a></p>
+        <p><a href="#">site map</a> | <a href="/contact">contact</a></p>
         <p style="text-align: center;"><a href="https://forestofunix.xyz/">&#60;&#60;</a>&nbsp;<a href="/nse">not software
                 engineers</a>&nbsp;<a href="https://quenten.nl/">&#62;&#62;</a></p>
     </footer>
