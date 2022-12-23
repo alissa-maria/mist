@@ -18,4 +18,3 @@ to do
 3. implement dark mode with sun/moon toggle button
 4. write light-weight image viewing script
 5. make api for comments
-6. use sebas' api as well bc it's funny and that's a thing that's possible
