@@ -2,6 +2,8 @@ using Genie.Router, Motregen.HomeController, Motregen.CommentsController
 
 route("/", HomeController.index)
 
+route("/about", HomeController.about)
+
 route("/contact", HomeController.contact)
 
 route("/nse", HomeController.nse)
