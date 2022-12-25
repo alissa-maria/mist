@@ -1,4 +1,4 @@
-using Genie.Router, Motregen.HomeController, Motregen.CommentsController
+using Genie.Router, Motregen.HomeController, Motregen.CommentsController, Motregen.IllustrationsController
 
 route("/", HomeController.index)
 
@@ -11,6 +11,9 @@ route("/contact", HomeController.contact)
 route("/art") do 
     serve_static_file("gallery.html")
 end
+
+# route("/art", IllustrationsController.gallery)
+# route("/art/filter", IllustrationsController.filter, named = :filter_illustrations)
 
 route("/guestbook", CommentsController.guestbook)
 route("/create_comment", CommentsController.create, method = POST, named = :create_comment)
