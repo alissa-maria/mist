@@ -6,12 +6,16 @@ function index()
   html(:home, :index, title = "Home")
 end
 
-function contact()
-  html(:home, :contact, title = "Contact")
+function about()
+  html(:home, :about, title = "About me")
 end
 
-function nse()
-  html(:home, :nse, title = "Not Software Engineering")
+function sitemap()
+  html(:home, :sitemap, title = "Site map")
+end
+
+function contact()
+  html(:home, :contact, title = "Contact")
 end
 
 end

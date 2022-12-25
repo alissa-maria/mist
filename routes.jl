@@ -4,9 +4,9 @@ route("/", HomeController.index)
 
 route("/about", HomeController.about)
 
-route("/contact", HomeController.contact)
+route("/site%20map", HomeController.sitemap)
 
-route("/nse", HomeController.nse)
+route("/contact", HomeController.contact)
 
 route("/art") do 
     serve_static_file("gallery.html")

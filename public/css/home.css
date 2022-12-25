@@ -65,11 +65,8 @@ a:hover {
     color: #d97fa2;
 }
 
-ul {
-    list-style: none;
-}
-
 .checkboxes {
+    list-style: none;
     padding-left: 0;
 }
 
