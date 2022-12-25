@@ -4,7 +4,7 @@ route("/", HomeController.index)
 
 route("/about", HomeController.about)
 
-route("/site%20map", HomeController.sitemap)
+route("/site-map", HomeController.sitemap)
 
 route("/contact", HomeController.contact)
 
