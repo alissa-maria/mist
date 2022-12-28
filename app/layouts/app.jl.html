@@ -11,17 +11,6 @@
 </head>
 
 <body>
-    <script>
-        function hamburger() {
-            var x = document.getElementById("topnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
-        } 
-    </script>
-
     <header>
         <h1>motregen &#60;3</h1>
     </header>
@@ -30,47 +19,23 @@
         <a href="javascript:void(0);" class="icon" onclick="hamburger()">
             <i class="fa-solid fa-bars"></i>
         </a>
-        <a href="/">home</a>
-        <a href="/art">art</a>
-        <a href="#">tech</a>
-        <a href="#">media</a>
-        <a href="/guestbook" style="float:right">guestbook</a>
-        
+        <a href="/">Home</a>
+        <a href="/art">Art</a>
+        <a href="#">Tech</a>
+        <a href="#">Media</a>
+        <a href="/guestbook" style="float:right">Guestbook</a>
     </div>
 
     <div class="row">
-        <div class="leftcolumn">
-            <% @yield %>
-        </div>
-        <div class="rightcolumn">
-            <div class="card">
-                <h2>About me</h2>
-                <p>skeebeedoo bap doo bap skoop dee boop wappa woop wapwap badoobeedoo ba ba doop dee woop</p>
-            </div>
-            <div class="card">
-                <h3>To do</h3>
-                <ul class="checkboxes">
-                    <li>implement dark mode</li>
-                    <li>about me page</li>
-                    <li>tech projects page</li>
-                    <li>media reviews page</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Update log</h3>
-                <p><b>[19/12/2022]</b>: completely revamped the home page.</p>
-                <p><b>[24/11/2022]</b>: the website is now online!</p>
-                <p><b>[03/11/2022]</b>: initial commit of <em>motregen</em>.</p>
-            </div>
-        </div>
+        <% @yield %>
     </div>
 
     <footer>
         <p><a href="/site-map">Site map</a> | <a href="/contact">Contact</a></p>
-        <!-- <p style="text-align: center;"><a href="https://forestofunix.xyz/">&#60;&#60;</a>&nbsp;<a href="/nse">Not Software
-                Engineers</a>&nbsp;<a href="https://quenten.nl/">&#62;&#62;</a></p> -->
     </footer>
 </body>
+
+<script src="/js/sidebar.js"></script>
 
 </html>
 

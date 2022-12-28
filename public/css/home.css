@@ -75,24 +75,27 @@ a:hover {
     margin: 0 0.6em;
 }
 
-.cutes li {
-    margin-bottom: 4px;
+.close p {
+    margin-top: 6px;
+    margin-bottom: 6px;
 }
 
-.cutes li a {
-    font-weight: 400;
-}
-
-.leftcolumn {
-    float: left;
-    width: 70%;
+.left {
     padding-right: 10px;
 }
 
-.rightcolumn {
+.right {
+    padding-left: 10px;
+}
+
+.small {
     float: left;
     width: 30%;
-    padding-left: 10px;
+}
+
+.big {
+    float: left;
+    width: 70%;
 }
 
 .card {
@@ -109,9 +112,12 @@ a:hover {
 }
 
 @media screen and (max-width: 800px) {
-    .leftcolumn,
-    .rightcolumn {
+    .small,
+    .big {
         width: 100%;
+    }
+
+    .left, .right {
         padding: 0;
     }
 }
