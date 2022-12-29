@@ -159,6 +159,43 @@ li {
     clear: both;
 }
 
+.search form,
+.search input {
+    width: 100%;
+}
+
+.search form {
+    gap: 16px;
+    display: flex;
+}
+
+.search input {
+    border: 0;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    background: transparent;
+}
+
+.search input:focus {
+    outline: none;
+}
+
+.search input::placeholder {
+    transition: color .3s;
+    color: rgba(var(--text), .75);
+}
+
+.tags a:hover {
+    background-color: var(--nav-background-hover);
+    text-decoration: none;
+}
+
+/* ::selection {
+    color:var(--link-hover);
+    background-color:rgb(var(--gradient-background));
+} */
+
 @media screen and (max-width: 800px) {
 
     .small,

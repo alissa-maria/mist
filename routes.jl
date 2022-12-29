@@ -1,4 +1,4 @@
-using Genie.Router, Motregen.HomeController, Motregen.CommentsController, Motregen.IllustrationsController
+using Genie.Router, Motregen.HomeController, Motregen.BlogController, Motregen.CommentsController, Motregen.IllustrationsController
 
 route("/", HomeController.index)
 
@@ -11,6 +11,9 @@ route("/contact", HomeController.contact)
 route("/art") do 
     serve_static_file("gallery.html")
 end
+
+route("/blog", BlogController.index)
+route("/blog/search", BlogController.search, named = :search_posts)
 
 # route("/art", IllustrationsController.gallery)
 # route("/art/filter", IllustrationsController.filter, named = :filter_illustrations)

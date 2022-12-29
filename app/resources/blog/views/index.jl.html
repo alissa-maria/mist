@@ -1,0 +1,21 @@
+<div class="left small">
+    <div class="card search">
+        <h3>Search</h3>
+        <form action="$(Genie.Router.linkto(:search_posts))">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" name="search_posts" placeholder="Search for posts..."/>
+        </form>
+    </div>
+
+    <div class="card tags">
+        <h3>Tags</h3>
+        <a href="">Bass guitar</a>
+    </div>
+</div>
+
+<div class="right big">
+    <div class="card">
+        <h2>Blog posts</h2>
+        <% partial(joinpath(Genie.config.path_resources, "blog", "views", "_posts.jl.html"))%>
+    </div>
+</div>

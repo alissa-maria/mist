@@ -1,4 +1,4 @@
-module PostsController
+module BlogController
 
 using Genie.Renderer.Html, Dates
 
@@ -12,7 +12,8 @@ struct Post
 end
 
 function index()
-  posts = readdir("app/resources/posts/views")
+  # posts = readdir("app/resources/posts/views")
+  html(:blog, :index, title = "Blog")
 end
 
 end
