@@ -13,7 +13,7 @@ route("/art") do
 end
 
 route("/blog", BlogController.index)
-route("/blog/search", BlogController.search, named = :search_posts)
+# route("/blog/search", BlogController.search, named = :search_posts)
 
 # route("/art", IllustrationsController.gallery)
 # route("/art/filter", IllustrationsController.filter, named = :filter_illustrations)
