@@ -1,6 +1,11 @@
-<!-- <div id="posts">
+<div id="posts">
     <% if ! isempty(posts) %>
+        <% for_each(posts) do post %>
+            <div class="post">
+                <p>$(post.date) <a href="/$(post.link)"><b>$(post.title)</b></a></p>
+            </div>
+        <% end %>
     <% else %>
-        <p>There are no blog posts yet.</p>
+        <p>There are no blog posts yet.!</p>
     <% end %>
-</div> -->
+</div>
