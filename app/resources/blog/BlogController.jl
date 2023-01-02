@@ -29,11 +29,11 @@ function index()
   html(:blog, :index, title = "Blog", posts = Posts)
 end
 
-function post(link::String)
+function blogpost(link::SubString{String})
   pst_index = findfirst(x -> x.link == link, Posts)
   if (!isnothing(pst_index))
     pst = getindex(Posts, pst_index)
-    html(pst.filename, title = pst.title)
+    html(:blog, pst.filename, title = pst.title)
   end
 end
 
