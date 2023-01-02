@@ -12,6 +12,7 @@ struct Post
 end
 
 Posts = Vector{Post}()
+Tags = Set{SubString{String}}()
 
 function initialize()
   if (isempty(Posts))
@@ -19,6 +20,9 @@ function initialize()
     foreach(post_names) do post_name
       data = YAML.load_file("app/resources/blog/views/posts/" * post_name)
       tags = split(data["tags"], ", ")
+      foreach(tags) do tag
+        push!(Tags, tag)
+      end
       push!(Posts, Post(data["title"], data["description"], tags, data["date"], data["link"], post_name))
     end
     reverse!(Posts)
