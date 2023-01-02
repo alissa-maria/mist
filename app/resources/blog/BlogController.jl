@@ -31,7 +31,7 @@ end
 
 function post(link::String)
   pst_index = findfirst(x -> x.link == link, Posts)
-  if (!isnothing(pst))
+  if (!isnothing(pst_index))
     pst = getindex(Posts, pst_index)
     html(pst.filename, title = pst.title)
   end
