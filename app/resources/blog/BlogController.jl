@@ -1,6 +1,6 @@
 module BlogController
 
-using Genie.Renderer.Html, Dates, YAML
+using Genie.Router, Genie.Renderer.Html, Dates, YAML
 
 struct Post
   title::String
@@ -30,7 +30,7 @@ function initialize()
 end
 
 function index()
-  html(:blog, :index, title = "Blog", posts = Posts)
+  html(:blog, :index, title = "Blog", posts = Posts, tags = Tags)
 end
 
 function blogpost(link::SubString{String})
@@ -39,6 +39,24 @@ function blogpost(link::SubString{String})
     pst = getindex(Posts, pst_index)
     html(:blog, "posts/" * pst.filename, layout = :post)
   end
+end
+
+function search()
+  isempty(strip(params(:query))) && redirect(:get_posts)
+
+  results = Vector{Post}()
+  query = lowercase(params(:query))
+
+  foreach(Posts) do post
+    if (occursin(query, lowercase(post.title)) | occursin(query, lowercase(post.description)))
+      push!(results, post)
+    end
+  end
+
+  html(:blog, :index, title = "Blog", posts = results, tags = Tags)
+end
+
+function filter()
 end
 
 end

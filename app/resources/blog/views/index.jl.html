@@ -3,13 +3,13 @@
         <h3>Search</h3>
         <form action="$(Genie.Router.linkto(:search_posts))">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" name="search_posts" placeholder="Search for posts..."/>
+            <input type="text" name="query" placeholder="Search for posts..."/>
         </form>
     </div>
 
     <div class="card tags">
         <h3>Tags</h3>
-        <a href="">Bass guitar</a>
+        <% partial(joinpath(Genie.config.path_resources, "blog", "views", "_tags.jl.html")) %>
     </div>
 </div>
 

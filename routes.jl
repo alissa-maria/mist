@@ -14,7 +14,8 @@ end
 
 BlogController.initialize()
 
-route("/blog", BlogController.index)
+route("/blog", BlogController.index, named = :get_posts)
+route("/search_posts", BlogController.search, named = :search_posts)
 
 route("/blog/:link", named = :get_post) do 
     BlogController.blogpost(payload(:link))
