@@ -2,7 +2,7 @@
     <% if ! isempty(tags) %>
         <% for_each(tags) do tag %>
             <!-- <a href="/blog/$(replace($tag, " " => "_" && lowercase($tag)))">$(tag)</a> -->
-            <a href="">$(tag)</a>
+            <a href="">$(tag)</a>&nbsp;
         <% end %>
     <% else %>
         <p>No tags...?</p>
