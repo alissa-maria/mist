@@ -1,7 +1,7 @@
 <div id="tags">
     <% if ! isempty(tags) %>
         <% for_each(tags) do tag %>
-            <a href="">$(tag)</a>
+            <a href="/blog/$(replace($tag, " " => "_" && lowercase($tag)))">$(tag)</a>
         <% end %>
     <% else %>
         <p>No tags...?</p>

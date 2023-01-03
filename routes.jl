@@ -16,6 +16,9 @@ BlogController.initialize()
 
 route("/blog", BlogController.index, named = :get_posts)
 route("/search_posts", BlogController.search, named = :search_posts)
+route("blog/:tag", named = :filter_posts) do 
+    BlogController.filter(payload(:tag))
+end
 
 route("/blog/:link", named = :get_post) do 
     BlogController.blogpost(payload(:link))

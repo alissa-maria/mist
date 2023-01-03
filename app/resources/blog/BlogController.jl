@@ -57,6 +57,16 @@ function search()
 end
 
 function filter()
+  results = Vector{Post}()
+  tag = params(:tag)
+
+  foreach(Posts) do post
+    if (tag in post.tags)
+      push!(results, post)
+    end
+  end
+
+  html(:blog, :index, title = "Blog", posts = results, tags = Tags)
 end
 
 end
