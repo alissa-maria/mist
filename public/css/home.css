@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;700&display=swap');
 
 * {
     box-sizing: border-box;
@@ -20,7 +19,8 @@
     --gradient-background: linear-gradient(to right, #faf2f9, #f4f9fb);
 }
 
-body.dark-mode {
+:root {
+    /* body.dark-mode { */
     --text: rgb(195, 195, 195);
 
     --link: rgb(173, 216, 230);
@@ -40,7 +40,7 @@ body.dark-mode {
 
 body {
     background-image: var(--gradient-background);
-    font-family: 'Karla', 'Inconsolata', MS Gothic, Arial;
+    font-family: 'Inconsolata', MS Gothic, Arial;
     color: var(--text);
 
     padding: 10px;
