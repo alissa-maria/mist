@@ -1,4 +1,4 @@
-using Genie.Router, Genie.Requests, Motregen.HomeController, Motregen.BlogController, Motregen.CommentsController, Motregen.IllustrationsController
+using Genie.Router, Genie.Requests, Motregen.HomeController, Motregen.BlogController, Motregen.CommentsController
 
 route("/", HomeController.index)
 
