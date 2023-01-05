@@ -37,7 +37,8 @@ function blogpost(link::SubString{String})
   pst_index = findfirst(x -> x.link == link, Posts)
   if (!isnothing(pst_index))
     pst = getindex(Posts, pst_index)
-    html(:blog, "posts/" * pst.filename, layout = :post)
+    date = Dates.format(pst.date, "E, d U Y")
+    html(:blog, "posts/" * pst.filename, layout = :post, post = pst, sdate = date)
   end
 end
 

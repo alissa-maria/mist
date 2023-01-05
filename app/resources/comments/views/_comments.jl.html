@@ -1,11 +1,8 @@
-<!-- $(Dates.format.(comment.created_at, dateformat"yyyy-mm-dd")) -->
-
 <div id="comments">
     <% if ! isempty(comments) %>
         <% for_each(comments) do comment %>
             <div class="comment">
                 <p><b>$(comment.name)</b> <!--<em>$(comment.created_at)</em>--></p>
-
                 <pre>$(comment.text)</pre>
             </div>
         <% end %>
