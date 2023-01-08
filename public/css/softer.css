@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;700&display=swap');
 
 * {
     box-sizing: border-box;
@@ -19,28 +19,9 @@
     --gradient-background: linear-gradient(to right, #faf2f9, #f4f9fb);
 }
 
-/* :root { */
-body.dark-mode {
-    --text: rgb(195, 195, 195);
-
-    --link: rgb(173, 216, 230);
-    --link-visited: rgb(117, 141, 201);
-    --link-hover: rgb(217, 127, 162);
-
-    --nav-background: rgb(32, 32, 32);
-    --nav-text: rgb(242, 242, 242);
-    --nav-background-hover: rgb(56, 56, 56);
-    --nav-text-hover: rgb(242, 242, 242);
-
-    --card-background: rgb(32, 32, 32);
-    --card-shadow: rgb(20, 20, 20);
-
-    --gradient-background: radial-gradient(circle, rgba(16, 16, 16, 1) 0%, rgba(16, 16, 16, 1) 100%);
-}
-
 body {
     background-image: var(--gradient-background);
-    font-family: 'Inconsolata', MS Gothic, Arial;
+    font-family: 'Karla', MS Gothic, Arial;
     color: var(--text);
 
     padding: 10px;
@@ -49,24 +30,21 @@ body {
 }
 
 header {
-    padding: 30px;
-    text-align: center;
-}
-
-header h1 {
-    font-size: 42px;
+    padding: 16px 16px 0px 16px;
 }
 
 a {
     color: #add8e6;
+    /*remove later*/
     text-decoration-style: dotted;
 }
 
 a:visited {
     color: #758dc9;
+    /*remove later*/
 }
 
-.card a:hover {
+a:hover {
     color: var(--link-hover);
     background-color: var(--nav-background-hover);
     text-decoration: none;
@@ -74,8 +52,7 @@ a:visited {
 
 .topnav {
     overflow: hidden;
-    background-color: var(--card-background);
-    box-shadow: 0px 15px 15px -15px var(--card-shadow), 0px 0 15px -3px var(--card-shadow);
+    /* background-color: var(--nav-background); */
 }
 
 .topnav a {
@@ -83,13 +60,9 @@ a:visited {
     display: block;
     color: var(--text);
     text-align: center;
-    padding: 14px 16px;
+    padding: 0px 16px;
     text-decoration: none;
-    transition: ease-in-out .3s;
-}
-
-.topnav a:hover {
-    background-color: var(--nav-background-hover);
+    /* transition: ease-in-out .3s; */
 }
 
 .topnav .icon {
@@ -103,10 +76,6 @@ footer {
 
 footer a {
     padding: 0 8px 0 8px;
-}
-
-footer a:hover {
-    color: var(--link-hover);;
 }
 
 p,
@@ -195,7 +164,6 @@ li {
 }
 
 @media screen and (max-width: 800px) {
-
     .small,
     .big {
         width: 100%;
