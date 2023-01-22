@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta description="Zolang die vrouw uit het Rijksmuseum
+    in geschilderde stilte en concentratie
+    uit een kan in een schaal
+    dag in, dag uit melk giet,
+    verdient de Wereld
+    geen einde van de wereld.">
+    <meta name="color-scheme" content="light dark">
+    <title>home / motregen</title>
+    <link rel="stylesheet" href="/css/default.css">
+    <link rel="stylesheet" href="/css/lightbox.min.css">
+    <script src="/js/lightbox-plus-jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>motregen</h1>
+    <% partial(joinpath(Genie.config.path_resources, "default", "views", "_nav.jl.html" )) %>
+
+    <hr>
+
+    <main>
+        <% @yield %>
+    </main>
+
+    <footer>
+        <hr>
+        <br>
+        <p>website made by me! © 2023</p>
+        <p><a href="/site-map">site map</a><a href="/contact">contact</a></p>
+    </footer>
+
+</body>
+
+</html>

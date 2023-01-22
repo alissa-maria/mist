@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap');
+
+html { font-size: 90%; }
+
+:root {
+    --background:    #F9F9F9;
+    --text:          #383a42;
+    --link:          #839496;
+    --accent-light:  #eed5d5;
+}
+
+body {
+    font-family: 'Karla', Helvetica, sans-serif;
+    margin: auto;
+    padding: 48px 0 32px;
+    max-width: 40em;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+footer {
+    margin: 32px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 6px 0;
+}
+
+footer a {
+    padding: 0 8px;
+}
+
+hr {
+    border: none;
+    border-top: 1px dotted #ddd;
+    width: 100%;
+}
+
+.img-box {
+    padding: 8px;
+}
+
+img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    letter-spacing: 0.02em;
+    text-transform: lowercase;
+}
+
+h2 {
+    border-bottom-style: dotted;
+    border-bottom-color: #ccc;
+    border-bottom-width: 1px;
+    padding-bottom: 6px;
+    text-align: right;
+    font-weight: 400; /* remove later maybe */
+}
+
+ul {
+    list-style: square;
+}
+
+main p {
+    text-indent: 1.6em;
+    line-height: 1.6em;
+}
+
+#topnav a {
+    padding-right: 4px;
+}
+
+a {
+    color: var(--link);
+    text-decoration: none;
+    transition: all 0.18s;
+}
+
+a:hover {
+    color: var(--text);
+}
+
+blockquote {
+    margin: 28px 48px;
+}
+
+blockquote p {
+    text-indent: 0;
+}
+
+.capital {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+span[title] {
+    cursor: help;
+}
+
+::selection {
+    background-color: var(--accent-light);
+}
+
+@media screen and (max-width: 40em) {
+    body {
+        padding: 24px;
+    }
+}

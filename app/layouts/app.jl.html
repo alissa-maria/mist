@@ -5,35 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$(title)</title>
-    <link rel="stylesheet" href="/css/home.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <meta name="color-scheme" content="dark light">
+    <title>$(title) / motregen</title>
+    <link rel="stylesheet" href="/css/default.css">
+    <link rel="stylesheet" href="/css/post.css">
 </head>
 
 <body>
-    <header>
-        <h1>motregen</h1>
-    </header>
+    <a href="/" id="title-small">motregen</a>
+    <% partial(joinpath(Genie.config.path_resources, "default", "views", "_nav.jl.html" )) %>
 
-    <div class="topnav" id="topnav">
-        <a href="javascript:void(0);" class="icon" onclick="hamburger()">
-            <i class="fa-solid fa-bars"></i>
-        </a>
-        <a href="/">Home</a>
-        <a href="/art">Art</a>
-        <a href="/blog">Blog</a>
-        <a href="/guestbook" style="float:right">Guestbook</a>
-    </div>
+    <hr>
 
-    <div class="row">
+    <main>
+        <h1>$(title)</h1>
+        <% if @isdefined sdate %>
+            <em>$(sdate)</em>   
+        <% end %>
         <% @yield %>
-    </div>
+    </main>
 
     <footer>
-        <p><a href="/site-map">Site map</a><a href="/contact">Contact</a></p>
+        <hr>
+        <br>
+        <p>website made by me! © 2023</p>
+        <p><a href="/site-map">site map</a><a href="/contact">contact</a></p>
     </footer>
-</body>
 
-<script src="/js/sidebar.js"></script>
+</body>
 
 </html>

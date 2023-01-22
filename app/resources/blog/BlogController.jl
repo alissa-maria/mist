@@ -5,45 +5,40 @@ using Genie.Router, Genie.Renderer.Html, Dates, YAML
 struct Post
   title::String
   description::String
-  tags::Array{String}
+  category::String
   date::Date
   link::String
   filename::String
 end
 
 Posts = Vector{Post}()
-Tags = Set{SubString{String}}()
 
 function initialize()
   if (isempty(Posts))
     post_names = readdir("app/resources/blog/views/posts")
     foreach(post_names) do post_name
       data = YAML.load_file("app/resources/blog/views/posts/" * post_name)
-      tags = split(data["tags"], ", ")
-      foreach(tags) do tag
-        push!(Tags, tag)
-      end
-      push!(Posts, Post(data["title"], data["description"], tags, data["date"], data["link"], post_name))
+      push!(Posts, Post(data["title"], data["description"], data["category"], data["date"], data["link"], post_name))
     end
     reverse!(Posts)
   end
 end
 
 function index()
-  html(:blog, :index, title = "Blog", posts = Posts, tags = Tags)
+  html(:blog, :index, title = "index", posts = Posts)
 end
 
 function blogpost(link::SubString{String})
   pst_index = findfirst(x -> x.link == link, Posts)
   if (!isnothing(pst_index))
     pst = getindex(Posts, pst_index)
-    date = Dates.format(pst.date, "E, d U Y")
-    html(:blog, "posts/" * pst.filename, layout = :post, post = pst, sdate = date)
+  date = Dates.format(pst.date, "E, d U Y")
+  html(:blog, "posts/" * pst.filename, post = pst, sdate = date)
   end
 end
 
 function search()
-  isempty(strip(params(:query))) && redirect(:get_posts)
+  isempty(strip(params(:query))) && redirect(:index)
 
   results = Vector{Post}()
   query = lowercase(params(:query))

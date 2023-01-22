@@ -1,21 +1,13 @@
-<div class="left small">
-    <div class="card search">
-        <h3>Search</h3>
-        <form action="$(Genie.Router.linkto(:search_posts))">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" name="query" placeholder="Search for posts..."/>
-        </form>
-    </div>
-
-    <div class="card tags">
-        <h3>Tags</h3>
-        <% partial(joinpath(Genie.config.path_resources, "blog", "views", "_tags.jl.html")) %>
-    </div>
-</div>
-
-<div class="right big">
-    <div class="card">
-        <h2>Blog posts</h2>
-        <% partial(joinpath(Genie.config.path_resources, "blog", "views", "_posts.jl.html")) %>
-    </div>
+<div id="posts">
+    <% if ! isempty(posts) %>
+        <% for_each(posts) do post %>
+            <div class="post">
+                <span>
+                    <span><a href="$(Genie.Router.linkto(:get_post, link = post.link))">$(post.title)</a></span> <span style="float:right">$(post.category)</span>
+                </span>
+            </div>
+        <% end %>
+    <% else %>
+        <p>Sorry, no posts yet.</p>
+    <% end %>
 </div>

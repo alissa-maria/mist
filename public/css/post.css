@@ -1,0 +1,20 @@
+body {
+    padding-top: 24px;
+}
+
+#title-small {
+    text-transform: uppercase;
+    letter-spacing: 0.3em
+}
+
+#topnav {
+    padding-top: 8px;
+}
+
+h1 {
+    font-weight: 400;
+}
+
+#posts .post {
+    margin-bottom: 8px;
+}

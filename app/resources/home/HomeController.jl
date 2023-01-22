@@ -3,19 +3,19 @@ module HomeController
 using Genie.Renderer.Html, SearchLight
 
 function index()
-  html(:home, :index, title = "Home")
+  html(:home, :index, layout = :home, title = "home")
 end
 
-function about()
-  html(:home, :about, title = "About me")
+function tools()
+  html(:home, :tools, title = "tools")
 end
 
 function sitemap()
-  html(:home, :sitemap, title = "Site map")
+  html(:home, :sitemap, title = "site map")
 end
 
 function contact()
-  html(:home, :contact, title = "Contact")
+  html(:home, :contact, title = "contact")
 end
 
 end
