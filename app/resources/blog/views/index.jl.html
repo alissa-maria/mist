@@ -3,7 +3,7 @@
         <% for_each(posts) do post %>
             <div class="post">
                 <span>
-                    <span><a href="$(Genie.Router.linkto(:get_post, link = post.link))">$(post.title)</a></span> <span style="float:right">$(post.category)</span>
+                    <span><a href="$(Genie.Router.linkto(:get_post, link = post.link))">$(post.title)</a></span> <span style="float:right"><a href="$(post.category)">$(post.category)</a></span>
                 </span>
             </div>
         <% end %>
