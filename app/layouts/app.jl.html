@@ -19,9 +19,7 @@
 
     <main>
         <h1>$(title)</h1>
-        <% if @isdefined sdate %>
-            <em>$(sdate)</em>   
-        <% end %>
+        <em id="post-date">$(sdate)</em>
         <% @yield %>
     </main>
 
