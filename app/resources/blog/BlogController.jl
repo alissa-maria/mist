@@ -25,16 +25,18 @@ function initialize()
 end
 
 function index()
-  html(:blog, :index, title = "index", posts = Posts)
+  html(:blog, :index, title="index", posts=Posts, sdate="")
 end
 
 function blogpost(link::SubString{String})
-  pst_index = findfirst(x -> x.link == link, Posts)
-  if (!isnothing(pst_index))
-    pst = getindex(Posts, pst_index)
-  date = Dates.format(pst.date, "E, d U Y")
-  html(:blog, "posts/" * pst.filename, post = pst, sdate = date)
-  end
+  post_index = findfirst(x -> x.link == link, Posts)
+  post = getindex(Posts, post_index)
+  date = Dates.format(post.date, "E, d U Y")
+  html(:blog, "posts/" * post.filename, post=post, sdate=date)
+end
+
+function exists(link::SubString{String})
+  return any(x -> x.link == link, Posts)
 end
 
 function search()
@@ -49,7 +51,7 @@ function search()
     end
   end
 
-  html(:blog, :index, title = "Blog", posts = results, tags = Tags)
+  html(:blog, :index, title="Blog", posts=results)
 end
 
 function filter()
@@ -62,7 +64,7 @@ function filter()
     end
   end
 
-  html(:blog, :index, title = "Blog", posts = results, tags = Tags)
+  html(:blog, :index, title="Blog", posts=results, tags=Tags)
 end
 
 end
