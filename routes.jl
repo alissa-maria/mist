@@ -12,11 +12,9 @@ BlogController.initialize()
 
 route("/index", BlogController.index, named=:get_posts)
 
-route("/posts/:link", named=:get_post) do
-    if BlogController.exists(payload(:link))
-        BlogController.blogpost(payload(:link))
-    else
-        serve_static_file("error-404.html")
+for post in BlogController.Posts
+    route("/" * post.link) do 
+        BlogController.blogpost(post.link)
     end
 end
 

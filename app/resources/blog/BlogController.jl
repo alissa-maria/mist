@@ -28,15 +28,11 @@ function index()
   html(:blog, :index, title="index", posts=Posts, sdate="")
 end
 
-function blogpost(link::SubString{String})
+function blogpost(link::String)
   post_index = findfirst(x -> x.link == link, Posts)
   post = getindex(Posts, post_index)
   date = Dates.format(post.date, "E, d U Y")
   html(:blog, "posts/" * post.filename, post=post, sdate=date)
-end
-
-function exists(link::SubString{String})
-  return any(x -> x.link == link, Posts)
 end
 
 function search()
