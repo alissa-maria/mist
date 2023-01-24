@@ -92,7 +92,7 @@ blockquote p {
     text-indent: 0;
 }
 
-.capital {
+strong {
     text-transform: uppercase;
     font-weight: 300;
     font-size: 14px;

@@ -24,6 +24,11 @@ function initialize()
   end
 end
 
+function refresh()
+  empty!(Posts)
+  initialize()
+end
+
 function index()
   html(:blog, :index, title="index", posts=Posts, sdate="")
 end
