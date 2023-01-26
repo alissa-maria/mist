@@ -8,8 +8,7 @@ route("/site-map", HomeController.sitemap)
 
 route("/contact", HomeController.contact)
 
-BlogController.htmlposts()
-BlogController.mdposts()
+BlogController.initialize()
 
 route("/index", BlogController.index)
 

@@ -17,11 +17,7 @@ Posts = Vector{Post}()
 Loading blog posts.
 """
 
-function htmlposts()
-  push!(Posts, Post("my 2023 focus for art", "-", "art", Date(2023-01-07), "my-2023-focus-for-art", "230107_art_goals.jl.html"))
-end
-
-function mdposts()
+function initialize()
   if (isempty(Posts))
     post_names = readdir("app/resources/blog/views/posts")
     foreach(post_names) do post_name
