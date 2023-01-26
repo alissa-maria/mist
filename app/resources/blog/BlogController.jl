@@ -13,7 +13,15 @@ end
 
 Posts = Vector{Post}()
 
-function initialize()
+"""
+Loading blog posts.
+"""
+
+function htmlposts()
+  push!(Posts, Post("my 2023 focus for art", "-", "art", Date(2023-01-07), "my-2023-focus-for-art", "230107_art_goals.jl.html"))
+end
+
+function mdposts()
   if (isempty(Posts))
     post_names = readdir("app/resources/blog/views/posts")
     foreach(post_names) do post_name
@@ -24,10 +32,9 @@ function initialize()
   end
 end
 
-function refresh()
-  empty!(Posts)
-  initialize()
-end
+"""
+Rendering web pages.
+"""
 
 function index()
   html(:blog, :index, title="index", posts=Posts, sdate="")
@@ -39,6 +46,10 @@ function blogpost(link::String)
   date = Dates.format(post.date, "E, d U Y")
   html(:blog, "posts/" * post.filename, post=post, sdate=date)
 end
+
+"""
+Filtering, searching, paging.
+"""
 
 function search()
   isempty(strip(params(:query))) && redirect(:index)
@@ -52,20 +63,22 @@ function search()
     end
   end
 
-  html(:blog, :index, title="Blog", posts=results)
+  html(:blog, :index, title="..." * query, posts=results)
 end
 
-function filter()
-  results = Vector{Post}()
-  tag = params(:tag)
+function category(category::String)
+  results = Posts
+  filter!(c -> c.category == category, results)
+  html(:blog, :index, title=category, posts=results)
+end
 
-  foreach(Posts) do post
-    if (tag in post.tags)
-      push!(results, post)
-    end
-  end
+"""
+Functions for debugging purposes.
+"""
 
-  html(:blog, :index, title="Blog", posts=results, tags=Tags)
+function refresh()
+  empty!(Posts)
+  initialize()
 end
 
 end
