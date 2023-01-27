@@ -22,10 +22,14 @@ function initialize()
     post_names = readdir("app/resources/blog/views/posts")
     foreach(post_names) do post_name
       data = YAML.load_file("app/resources/blog/views/posts/" * post_name)
-      push!(Posts, Post(data["title"], data["description"], data["category"], data["date"], data["link"], post_name))
+      push!(Posts, Post(data["title"], data["description"], data["category"], data["date"], spaces(data["title"]), post_name))
     end
     reverse!(Posts)
   end
+end
+
+function spaces(title::String)
+  return replace!(title, " " => "%20")
 end
 
 """
