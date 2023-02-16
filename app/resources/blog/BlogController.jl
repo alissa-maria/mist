@@ -44,7 +44,7 @@ function blogpost(link::String)
 end
 
 """
-Filtering, searching, paging.
+Searching, filtering, paging.
 """
 
 function search()
@@ -66,6 +66,16 @@ function category(category::String)
   results = Posts
   filter!(c -> c.category == category, results)
   html(:blog, :index, title=category, posts=results)
+end
+
+function pagination(page::Int, limit::Int)
+  offset = (page - 1) * limit
+  pages = ceil(Int, length(Posts) / limit)
+  if (page > pages)
+    page = pages
+    offset = (page - 1) * limit
+  end
+  return Posts[offset+1:offset+limit], pages
 end
 
 """
