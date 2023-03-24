@@ -6,8 +6,6 @@ route("/", HomeController.index)
 
 route("/tools", HomeController.tools)
 
-route("/site-map", HomeController.sitemap)
-
 route("/contact", HomeController.contact)
 
 route("/index", BlogController.index)

@@ -86,6 +86,7 @@ a:hover {
 
 blockquote {
     margin: 28px 48px;
+    line-height: 1.6em;
 }
 
 blockquote p {

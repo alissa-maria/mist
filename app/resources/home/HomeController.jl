@@ -10,10 +10,6 @@ function tools()
   html(:home, :tools, title = "tools", sdate = "")
 end
 
-function sitemap()
-  html(:home, :sitemap, title = "site map", sdate = "")
-end
-
 function contact()
   html(:home, :contact, title = "contact", sdate = "")
 end
