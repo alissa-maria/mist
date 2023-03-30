@@ -1,7 +1,6 @@
 ---
 title: my 2023 focus for art
-description: a
-category: art
+category: kunst
 date: 2023-01-17
 ---
 

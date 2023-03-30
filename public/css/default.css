@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
 html { font-size: 90%; }
 
@@ -48,6 +49,7 @@ img {
 }
 
 h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather';
     letter-spacing: 0.02em;
     text-transform: lowercase;
 }
@@ -87,6 +89,8 @@ a:hover {
 blockquote {
     margin: 28px 48px;
     line-height: 1.6em;
+    border-left: 1px dotted var(--link);
+    padding: 0 1.8em;
 }
 
 blockquote p {

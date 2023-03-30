@@ -1,7 +1,10 @@
 var images = document.querySelectorAll("img");
-console.log(images)
+console.log(images);
 
 for (const image of images) {
+  if (image.classList.contains("icon")) {
+    continue;
+  }
   var div = document.createElement("div");
   div.classList.add("img-box");
   var link = document.createElement("a");

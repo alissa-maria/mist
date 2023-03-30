@@ -10,6 +10,14 @@ route("/contact", HomeController.contact)
 
 route("/index", BlogController.index)
 
+categories = ["kunst", "technologie", "etc"]
+
+for categorie in categories
+    route("/" * categorie) do 
+        BlogController.index_category(categorie)
+    end 
+end
+
 for post in BlogController.Posts
     route("/" * post.link) do 
         BlogController.blogpost(post.link)
