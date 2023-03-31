@@ -8,6 +8,7 @@
     <title>$(title) / motregen</title>
     <link rel="stylesheet" href="/css/default.css">
     <link rel="stylesheet" href="/css/post.css">
+    <link rel="stylesheet" href="/css/lightbox.min.css">
 </head>
 
 <body>
@@ -18,10 +19,15 @@
 
     <main>
         <h1>$(title)</h1>
+        <em id="post-date">$(sdate) in <a href="/$(category)">$(category)</a></em>
         <% @yield %>
     </main>
 
     <% partial(joinpath(Genie.config.path_resources, "default", "views", "_footer.jl.html" )) %>
+
+    <script src="/js/image-wrapper.js"></script>
+    <script src="/js/lightbox-plus-jquery.min.js"></script>
+
 </body>
 
 </html>

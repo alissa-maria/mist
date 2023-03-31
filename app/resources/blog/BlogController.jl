@@ -42,18 +42,18 @@ Rendering web pages.
 """
 
 function index()
-  html(:blog, :index, title="index", posts=Posts, sdate="")
+  html(:blog, :index, title="index", posts=Posts)
 end
 
 function index_category(category::String)
-  html(:blog, :index, title=category, posts=get_by_category(category), sdate="")
+  html(:blog, :index, title=category, posts=get_by_category(category))
 end
 
 function blogpost(link::String)
   post_index = findfirst(x -> x.link == link, Posts)
   post = getindex(Posts, post_index)
   date = Dates.format(post.date, "E, d U Y", locale="dutch")
-  html(:blog, "posts/" * post.filename, post=post, sdate=date)
+  html(:blog, "posts/" * post.filename, layout = :post, post=post, sdate=date)
 end
 
 """

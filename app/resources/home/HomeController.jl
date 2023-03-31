@@ -7,11 +7,15 @@ function index()
 end
 
 function tools()
-  html(:home, :tools, title = "tools", sdate = "")
+  html(:home, :tools, title = "tools")
+end
+
+function over()
+  html(:home, :over, title = "over mij")
 end
 
 function contact()
-  html(:home, :contact, title = "contact", sdate = "")
+  html(:home, :contact, title = "contact")
 end
 
 end
