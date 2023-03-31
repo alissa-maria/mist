@@ -23,7 +23,7 @@ function initialize()
       data = YAML.load_file("app/resources/blog/views/posts/" * post_name)
       push!(Posts, Post(data["title"], data["category"], data["date"], replace(data["title"], " " => "-"), post_name))
     end
-    reverse!(Posts)
+    reverse!(sort!(Posts, by = post -> post.date)) # Reverse chronological order
   end
 end
 
@@ -76,9 +76,7 @@ function search()
 end
 
 function get_by_category(category::String)
-  results = copy(Posts)
-  filter!(c -> c.category == category, results)
-  return results
+  return filter(c -> c.category == category, Posts)
 end
 
 function pagination(page::Int, limit::Int)
