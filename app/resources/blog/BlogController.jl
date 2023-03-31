@@ -42,7 +42,7 @@ Rendering web pages.
 """
 
 function index()
-  html(:blog, :index, title="index", posts=Posts)
+  html(:blog, :index, title="Index", posts=Posts)
 end
 
 function index_category(category::String)

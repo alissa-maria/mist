@@ -3,7 +3,7 @@ module HomeController
 using Genie.Renderer.Html, SearchLight
 
 function index()
-  html(:home, :index, layout = :home, title = "home")
+  html(:home, :index, layout = :home)
 end
 
 function tools()
@@ -11,11 +11,11 @@ function tools()
 end
 
 function over()
-  html(:home, :over, title = "over mij")
+  html(:home, :over, title = "Over mij")
 end
 
 function contact()
-  html(:home, :contact, title = "contact")
+  html(:home, :contact, title = "Contact")
 end
 
 end
