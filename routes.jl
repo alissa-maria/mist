@@ -12,7 +12,7 @@ route("/contact", HomeController.contact)
 
 route("/index", BlogController.index)
 
-categories = ["kunst", "technologie", "etc"]
+categories = ["kunst", "colofon"]
 
 for categorie in categories
     route("/" * categorie) do 

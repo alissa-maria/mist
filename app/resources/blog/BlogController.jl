@@ -33,7 +33,7 @@ Dutch date names.
 
 dutch_months = ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december"]
 dutch_months_abbrev = ["jan.", "feb.", "mrt.", "apr.", "mei", "jun.", "jul.", "aug.", "sep.", "okt.", "nov.", "dec."]
-dutch_days = ["maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag", "zondag"]
+dutch_days = ["Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag", "Zondag"]
 
 Dates.LOCALES["dutch"] = Dates.DateLocale(dutch_months, dutch_months_abbrev, dutch_days, [""])
 

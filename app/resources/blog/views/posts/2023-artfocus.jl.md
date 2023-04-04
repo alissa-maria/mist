@@ -1,5 +1,5 @@
 ---
-title: my 2023 focus for art
+title: My 2023 focus for art
 category: kunst
 date: 2023-01-17
 ---
