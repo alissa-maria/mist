@@ -21,7 +21,7 @@ function initialize()
     post_names = readdir("app/resources/blog/views/posts")
     foreach(post_names) do post_name
       data = YAML.load_file("app/resources/blog/views/posts/" * post_name)
-      push!(Posts, Post(data["title"], data["category"], data["date"], replace(data["title"], " " => "-"), post_name))
+      push!(Posts, Post(data["title"], data["category"], data["date"], lowercase(replace(data["title"], " " => "-")), post_name))
     end
     reverse!(sort!(Posts, by = post -> post.date)) # Reverse chronological order
   end
