@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
-html { font-size: 90%; }
+html {
+    font-size: 90%;
+}
 
 :root {
-    --background:    #F9F9F9;
-    --text:          #383a42;
-    --link:          #839496;
-    --accent-light:  #eed5d5;
+    --background: #F9F9F9;
+    --text: #383a42;
+    --link: #839496;
+    --accent-light: #eed5d5;
+    --code: #e1efdb;
 }
 
 body {
@@ -29,7 +32,7 @@ footer p {
 }
 
 footer a {
-    padding: 0 8px;
+    padding: 0 6px;
 }
 
 hr {
@@ -48,7 +51,12 @@ img {
     max-width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Merriweather';
     letter-spacing: 0.02em;
 }
@@ -59,7 +67,6 @@ h2 {
     border-bottom-width: 1px;
     padding-bottom: 6px;
     text-align: right;
-    font-weight: 400; /* remove later maybe */
 }
 
 ul {
@@ -72,7 +79,7 @@ main p {
 }
 
 #topnav a {
-    padding-right: 4px;
+    padding-right: 6px;
 }
 
 a {
@@ -104,6 +111,11 @@ strong {
 
 span[title] {
     cursor: help;
+}
+
+code {
+    font-size: 1.1em;
+    /* background-color: var(--code); */
 }
 
 ::selection {
