@@ -122,6 +122,21 @@ code {
     background-color: var(--accent-light);
 }
 
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        background: #1a1a1c;
+        color: #cbc9c9;
+    }
+
+    a:hover {
+        color: #cbc9c9;
+    }
+
+    ::selection {
+        background-color: #50383a;
+    }
+}
+
 @media screen and (max-width: 40em) {
     body {
         padding: 24px;
