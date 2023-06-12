@@ -1,6 +1,7 @@
 module BlogController
 
-using Genie.Router, Genie.Renderer.Html, Dates, YAML, Markdown
+using Genie.Router, Genie.Renderer.Html, Dates, YAML
+import Markdown
 
 struct Post
   title::String
