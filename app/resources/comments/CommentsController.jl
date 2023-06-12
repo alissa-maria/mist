@@ -1,6 +1,6 @@
 module CommentsController
 
-using Genie.Renderer.Html, Genie.Requests, SearchLight, Motregen.Comments
+using Genie.Renderer.Html, Genie.Requests, Genie.Exceptions, SearchLight, ..Main.UserApp.Comments
 import Markdown
 
 function guestbook()
@@ -12,9 +12,11 @@ function create()
   sanitized_text::String = sanitize(postpayload(:text))
   sanitized_page::String = sanitize(postpayload(:page))
 
-  with(Comment(name=sanitized_name, text=sanitized_text, page=sanitized_page)) do comment
-    save(comment)
-    redirect("/guestbook", status_code=302) # route should not be hardcoded
+  comment = Comment(name=sanitized_name, text=sanitized_text, page=sanitized_page)
+  if save(comment)
+    redirect(:guestbook)
+  else
+    throw(ExceptionalResponse(redirect(:guestbook)))
   end
 end
 

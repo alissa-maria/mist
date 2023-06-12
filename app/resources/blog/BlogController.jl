@@ -1,6 +1,6 @@
 module BlogController
 
-using Genie.Router, Genie.Renderer.Html, Dates, YAML
+using Genie.Router, Genie.Renderer.Html, Dates, YAML, Markdown
 
 struct Post
   title::String
@@ -42,18 +42,17 @@ Rendering web pages.
 """
 
 function index()
-  html(:blog, :index, title="Index", posts=Posts)
+  html(:blog, :index, title="Index", posts=Posts, context = @__MODULE__)
 end
 
 function index_category(category::String)
-  html(:blog, :index, title=category, posts=get_by_category(category))
+  html(:blog, :index, title=category, posts=get_by_category(category), context = @__MODULE__)
 end
 
 function blogpost(link::String)
   post_index = findfirst(x -> x.link == link, Posts)
   post = getindex(Posts, post_index)
-  date = Dates.format(post.date, "E, d U Y", locale="dutch")
-  html(:blog, "posts/" * post.filename, layout = :post, post=post, sdate=date)
+  html(:blog, "posts/" * post.filename, layout = :post, post=post, context = @__MODULE__)
 end
 
 """
@@ -72,7 +71,7 @@ function search()
     end
   end
 
-  html(:blog, :index, title="..." * query, posts=results)
+  html(:blog, :index, title="..." * query, posts=results, context = @__MODULE__)
 end
 
 function get_by_category(category::String)

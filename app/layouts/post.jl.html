@@ -19,7 +19,7 @@
 
     <main>
         <h1>$(title)</h1>
-        <em id="post-date">$(sdate) in <a href="/$(category)">$(category)</a></em>
+        <em id="post-date">$(Dates.format(date, "E, d U Y", locale="dutch")) in <a href="/$(category)">$(category)</a></em>
         <% @yield %>
     </main>
 
